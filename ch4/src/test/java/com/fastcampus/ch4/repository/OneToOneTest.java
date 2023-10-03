@@ -30,7 +30,7 @@ import static com.fastcampus.ch4.entity.QBoard.board;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class BoardRepositoryTest5 {
+public class OneToOneTest {
 
 	@Autowired
 	public EntityManager em;

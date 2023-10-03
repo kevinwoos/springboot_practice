@@ -24,7 +24,7 @@ public class Ch4Application implements CommandLineRunner {
 //		SpringApplication.run(Ch4Application.class, args);
 		
 		SpringApplication app = new SpringApplication(Ch4Application.class);
-		app.setWebApplicationType(WebApplicationType.NONE);
+//		app.setWebApplicationType(WebApplicationType.NONE);
 		app.run(args);
 	}
 
