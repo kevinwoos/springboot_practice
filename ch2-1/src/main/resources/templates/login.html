@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lng="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<h1 th:text="|ErrorMsg=${param.msg}|">Msg</h1>
+<h1 th:text="|ErrorMsg=${msg}|">Msg</h1>
+<h1 th:text="|ErrorMsg=${#request.getAttribute('msg')}|">Msg</h1>
+<body>
+	<form action="/login/login" method="post">
+		id:<br>
+		<input type="text" name="id"><br>
+		pwd:<br>
+		<input type="password" name="pwd"><br>
+		<input type="submit" value="로그인">
+	</form>
+</body>
+</html>

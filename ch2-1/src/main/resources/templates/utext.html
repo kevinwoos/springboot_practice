@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lng="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<h1 th:text="|ErrorMsg=${param.msg}|"></h1>
+<h1 th:text="|ErrorMsg=${msg}|"></h1>
+<h1 th:text="|ErrorMsg=${#request.getAttribute('msg')}|"></h1>
+<h1 th:text="| Date = [${year}-${session.month}-${application.day}]|"
+<body>
+	<a href="index.html" th:href="@{/board/list}"></a>
+	<select name="" id="" multiple>
+		<option th:each="opt : ${list}" th:value="${opt}">[[${opt}]]</option>
+	</select>
+	<table>
+		<tr th:each="item : ${list}">
+			<td th:text="${item}"></td>
+		</tr>
+		<tr th:if="${lists.size}==0">
+			<td>게시물이 없습니다.</td>
+		</tr>
+	</table>
+	<h1 th:text="|${lastName}|">lastName</h1>
+	<h1>[[${lastName}]]</h1>
+	<span th:text="|${rawString}|">lastName</span>
+	<span th:utext="|${rawString}|">lastName</h1>
+</body>
+</html>
